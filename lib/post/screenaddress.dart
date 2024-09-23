@@ -1,3 +1,4 @@
+import 'package:api_test/home/home.dart';
 import 'package:api_test/models/models.dart';
 import 'package:api_test/post/bloc/post_bloc.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,10 @@ class ScreenAddress extends StatelessWidget {
         if (state is postafterState) {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text(state.message)));
+          if (state.message == 'success') {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const homeScreen()));
+          }
         }
       },
       builder: (context, state) {

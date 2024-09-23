@@ -16,7 +16,15 @@ class postafterState extends PostState {
   @override
   final message;
   @override
-  final value = true;
+  final value;
 
-  const postafterState({required this.message});
+  const postafterState({required this.message,required this.value});
+}
+
+
+class circular extends PostState{
+  
+  @override
+  // TODO: implement value
+  get value => true;
 }

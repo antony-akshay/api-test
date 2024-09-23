@@ -23,7 +23,7 @@ class Api {
           'https://tailor-app-backend-2o5l.onrender.com/api/v1/user/save-address');
 
       final response = await http.post(url, body: a.toJson());
-      print('response: ${response.statusCode}');
+      //print('response: ${response.statusCode}');
 
       if (response.statusCode == 200) {
         // String? message = 'success';
@@ -33,7 +33,7 @@ class Api {
         return 'error';
       }
     } catch (e) {
-      print(e);
+     // print(e);
     }
   }
 }
